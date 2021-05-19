@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EYE™️</title>
+        <meta charset="utf-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+        <script src="https://www.momentcrm.com/embed"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+        MomentCRM('init', {
+            'teamId': 'eye',
+            'doChat': true,
+            'doTracking': true,
+        });
+        </script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <div style="background-color: black;" id="fixer">
+                    <a href="javascript:void(0);" class="icon" style="padding-left: 10px;" onclick="myFunction()">
+                        <i style="color: white; padding-top: 10px;" class="fa fa-2x fa-bars"></i>
+                    </a>
+                    <a style="float: right;" href="index.html"><img src="image0.gif" alt="Sorry" height="50px" width="75px"></a>
+                    <div id="displaynav1">
+                        <ul class="topnav">
+                            <li><a href="javascript:confirmation1()"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                            <li><a href="javascript:confirmation2()"><i class="fa fa-shopping-bag"></i>Products</a></li>
+                            <li><a href="javascript:confirmation3()"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+                            <li><a href="javascript:confirmation4()"><i class="fa fa-info"></i>About</a></li>
+                            <div class="right">
+                                <li><p id="info13">Total: AED </p><p id="total13"></p></li>
+                                <li><a href="javascript:check()"><i class="fa fa-shopping-cart"></i>Checkout</a></li>
+                                <li><a id="s13" href="javascript:confirmation6()" class="active"><i class="fa fa-sign-in"></i>Sign In</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-s-12 col-center" id="div15">
+                <h1>Sign In</h1>
+                <p>Sign in to your account to purchase products and gain benefits!</p>
+                <hr>
+                <div id="alert4"></div>
+                <form action="scripts1.php" method="POST" autocomplete="on">
+                    <label for="username">Username or Email</label>
+                    <input onclick="edit()" type="text" id="username" name="username" placeholder="Enter username or email" required>
+                    <label for="password">Password</label>
+                    <input onclick="edit()" type="password" id="password" name="password" placeholder="Enter password" required>
+                    <div>Forgot password? <a class="a1" href="reset.html">Reset</a> your password.</div>
+                    <input type="submit" name="send4" value="Sign In">
+                </form>
+                <div>Don't have an account? <a class="a1" href="signup.html">Sign up</a> to create one!</div>
+            </div>
+            <div class="col-4 col-s-12" id="div3">
+                <h2>Contact Us</h2>
+                <p>Email us at <a href="mailto:eyemilitia@gmail.com">eyemilitia@gmail.com</a></p>
+                <p>Or call us at +971-4-371-2021</p>  
+            </div>
+            <div class="col-4 col-s-12" id="div4">
+                <p>Khalifa Almazrouei</p>
+                <p>Mohammad Abuirsheid</p>     
+                <p>Rachid Itani</p>     
+                <p>Yameen Khan</p>
+                <p><em class="fa fa-copyright"></em> 2021</p>
+            </div>
+            <div class="col-4 col-s-12" id="div5">
+                <h2>Connect On</h2>
+                <p>
+                    <a href="https://www.facebook.com/RITDubai"><em class="fa fa-facebook fa-2x"></em></a>
+                    <a href="https://www.instagram.com/rit_dubai/?hl=en"><em class="fa fa-instagram fa-2x"></em></a>
+                    <a href="https://twitter.com/ritdubai?lang=en"><em class="fa fa-twitter fa-2x"></em></a>
+                    <a href="https://www.youtube.com/channel/UCoZf7pq7JEJrD-clk5k5adw"><em class="fa fa-youtube-play fa-2x"></em></a>
+                </p>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("displaynav1");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+            }
+            signin();
+        </script>
+    </body>
+</html>

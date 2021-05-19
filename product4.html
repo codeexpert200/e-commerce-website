@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EYE™️</title>
+        <meta charset="utf-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+        <script src="https://www.momentcrm.com/embed"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+        MomentCRM('init', {
+            'teamId': 'eye',
+            'doChat': true,
+            'doTracking': true,
+        });
+        </script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <div style="background-color: black;" id="fixer">
+                    <a href="javascript:void(0);" class="icon" style="padding-left: 10px;" onclick="myFunction()">
+                        <i style="color: white; padding-top: 10px;" class="fa fa-2x fa-bars"></i>
+                    </a>
+                    <a style="float: right;" href="index.html"><img src="image0.gif" alt="Sorry" height="50px" width="75px"></a>
+                    <div id="displaynav1">
+                        <ul class="topnav">
+                            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                            <li><a href="products.html" class="active"><i class="fa fa-shopping-bag"></i>Products</a></li>
+                            <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+                            <li><a href="about.html"><i class="fa fa-info"></i>About</a></li>
+                            <div class="right">
+                                <li><p id="info4">Total: AED </p><p id="total4"></p></li>
+                                <li><a href="javascript:check()"><i class="fa fa-shopping-cart"></i>Checkout</a></li>
+                                <li><a id="s6" href="signin.html"><i class="fa fa-sign-in"></i>Sign In</a></li>
+                                <div class="dropdown">
+                                    <button id="s20" onclick="myFunction2()" class="dropbtn"><i class="fa fa-user"></i>Account <i class="fa fa-caret-down"></i></button>
+                                    <div id="displaynav2" class="dropdown-content">
+                                        <div id="fullname"></div>
+                                        <li><a href="passwordchange.html"><i class="fa fa-key"></i>Change Password</a></li>
+                                        <li><a href="accountdelete.html"><i class="fa fa-trash-o"></i>Delete Account</a></li>
+                                        <li><a href="javascript:signout()"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-s-12">
+                <div class="col-6 col-s-12 div6">
+                    <img src="image9.jpg" alt="Sorry" height="100%" width="100%">
+                    <div class="div10">
+                        <p id="productstatus1"></p>
+                        <p id="productstatus2"></p>
+                        <label id="label4" for="product4">Quantity: </label>
+                        <input onkeyup="validate4()" type="number" id="product4" name="product4" value="1" min="1"> 
+                        <div class="div11 textcolor2">
+                            <h3 id="extra4"></h3>
+                            <button id="b10" onclick="add4()">Add to Cart</button>
+                            <button id="b4" onclick="remove4()">Remove from Cart</button>
+                            <button onclick="second()">Go Back</button>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-s-12 div9 div7">
+                    <h1 class="textcolor">Razer Anzu Smart Glasses</h1>
+                    <p>Blue light filtering or polarized sunglass lenses</p>
+                    <p>Low latency audio</p>
+                    <p>Built-in mic and speakers</p>
+                    <p><strong>Razer For High Performance Audio and Protection:</strong></p>
+                    <p>Durable and most powerful glasses with audio and blue light protection laptop</p>
+                    <h1 class="textcolor">Price: AED 734.56</h1>
+                </div>
+            </div>
+            <div class="col-4 col-s-12" id="div3">
+                <h2>Contact Us</h2>
+                <p>Email us at <a href="mailto:eyemilitia@gmail.com">eyemilitia@gmail.com</a></p>
+                <p>Or call us at +971-4-371-2021</p>  
+            </div>
+            <div class="col-4 col-s-12" id="div4">
+                <p>Khalifa Almazrouei</p>
+                <p>Mohammad Abuirsheid</p>     
+                <p>Rachid Itani</p>     
+                <p>Yameen Khan</p>
+                <p><em class="fa fa-copyright"></em> 2021</p>
+            </div>
+            <div class="col-4 col-s-12" id="div5">
+                <h2>Connect On</h2>
+                <p>
+                    <a href="https://www.facebook.com/RITDubai"><em class="fa fa-facebook fa-2x"></em></a>
+                    <a href="https://www.instagram.com/rit_dubai/?hl=en"><em class="fa fa-instagram fa-2x"></em></a>
+                    <a href="https://twitter.com/ritdubai?lang=en"><em class="fa fa-twitter fa-2x"></em></a>
+                    <a href="https://www.youtube.com/channel/UCoZf7pq7JEJrD-clk5k5adw"><em class="fa fa-youtube-play fa-2x"></em></a>
+                </p>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("displaynav1");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+            }
+            function myFunction2() {
+                var y = document.getElementById("displaynav2");
+                if (y.style.display === "block") {
+                  y.style.display = "none";
+                } else {
+                  y.style.display = "block";
+                }
+            }
+            authenticate();
+            verify4();
+            var num4;
+            var val4;
+            var b4 = sessionStorage.getItem("key24");
+            function verify4() {
+                var hr = new XMLHttpRequest();
+                var url = "scripts6.php";
+                hr.open("POST",url,true);
+                hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                hr.onreadystatechange = function() {
+                    if(hr.readyState == 4 && hr.status == 200) {
+                        var return_data = hr.responseText;
+                        num4 = return_data.replace(/[^0-9]/g,'');
+                        var input4 = document.getElementById("product4");
+                        input4.setAttribute("max",num4);
+                        if(num4 > 10){
+                            document.getElementById("extra4").innerHTML = "";
+                            document.getElementById("label4").style.display = "inline-block";
+                            document.getElementById("product4").style.display = "inline-block";
+                            document.getElementById("b10").style.display = "inline-block";
+                            document.getElementById("b4").style.visibility = "inherit";
+                            if (b4 == "true") {
+                                document.getElementById("b4").style.display = "inline-block";
+                            }
+                            else {
+                                document.getElementById("b4").style.display = "none";
+                            }
+                        }
+                        else if(num4 > 0) {
+                            document.getElementById("extra4").innerHTML = return_data;
+                            document.getElementById("label4").style.display = "inline-block";
+                            document.getElementById("product4").style.display = "inline-block";
+                            document.getElementById("b10").style.display = "inline-block";
+                            document.getElementById("b4").style.visibility = "inherit";
+                            if (b4 == "true") {
+                                document.getElementById("b4").style.display = "inline-block";
+                            }
+                            else {
+                                document.getElementById("b4").style.display = "none";
+                            }
+                        }
+                        else {
+                            document.getElementById("extra4").innerHTML = "Out of stock!";
+                            document.getElementById("label4").style.display = "none";
+                            document.getElementById("product4").style.display = "none";
+                            document.getElementById("b10").style.display = "none";
+                            document.getElementById("b4").style.visibility = "hidden";
+                        }
+                    }
+                }
+                hr.send();
+            }
+            function validate4() {
+                val4 = document.getElementById("product4").value;
+                num4 = parseInt(num4);
+                val4 = parseInt(val4);
+                if(val4 > num4) {
+                    document.getElementById("product4").value = 1;
+                }
+                else {
+                    document.getElementById("product4").value = val4;
+                }
+            }
+            products4();
+            setInterval(authenticate,1000);
+            setInterval(verify4,1000);
+            setInterval(products4,1000);
+        </script>
+    </body>
+</html>
